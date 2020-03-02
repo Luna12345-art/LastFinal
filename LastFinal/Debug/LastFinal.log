@@ -1,0 +1,29 @@
+﻿  Game.cpp
+D:\LastFinal\Player.h(27,13): error C2371: 'Player::spritePlayer': redefinition; different basic types
+D:\LastFinal\Player.h(19): message : see declaration of 'Player::spritePlayer'
+  Player.cpp
+D:\LastFinal\Player.h(27,13): error C2371: 'Player::spritePlayer': redefinition; different basic types
+D:\LastFinal\Player.h(19): message : see declaration of 'Player::spritePlayer'
+D:\LastFinal\Player.cpp(58,86): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\LastFinal\Player.cpp(95,5): error C2664: 'bool Collider::checkCollision(sf::RectangleShape &)': cannot convert argument 1 from 'sf::Sprite' to 'sf::RectangleShape &'
+D:\LastFinal\collider.h(14,7): message : see declaration of 'Collider::checkCollision'
+  collider.cpp
+D:\LastFinal\collider.cpp(11,33): error C2882: 'sf': illegal use of namespace identifier in expression
+D:\LastFinal\collider.cpp(11,33): error C2059: syntax error: ':'
+D:\LastFinal\collider.cpp(11,40): error C2143: syntax error: missing ';' before '&'
+D:\LastFinal\collider.cpp(11,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\LastFinal\collider.cpp(11,47): error C2059: syntax error: ')'
+D:\LastFinal\collider.cpp(12,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\LastFinal\collider.cpp(14,2): error C2059: syntax error: 'return'
+D:\LastFinal\collider.cpp(16,1): error C2059: syntax error: '}'
+D:\LastFinal\collider.cpp(16,1): error C2143: syntax error: missing ';' before '}'
+D:\LastFinal\collider.cpp(19,1): error C2143: syntax error: missing ';' before '{'
+D:\LastFinal\collider.cpp(19,1): error C2447: '{': missing function header (old-style formal list?)
+  main.cpp
+D:\LastFinal\Player.h(27,13): error C2371: 'Player::spritePlayer': redefinition; different basic types
+D:\LastFinal\Player.h(19): message : see declaration of 'Player::spritePlayer'
+  Generating Code...
