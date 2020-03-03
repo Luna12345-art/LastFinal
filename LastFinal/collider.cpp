@@ -1,22 +1,13 @@
-#include "collider.h"
+#include "Collider.h"
+
+Collider::Collider(sf::RectangleShape& body) :body(body) {}
 
 
 
-
-
-Collider::Collider()
-{
-}
-
-bool Collider::checkCollision(sf:sprite& other)
+bool Collider::checkCollision(sf::RectangleShape& other)
 {
 	//this->other = other;
 	return body.getGlobalBounds().intersects(other.getGlobalBounds(), intersection);
-
-}
-
-Collider::Collider(sf::Sprite spritePlayer)
-{
 
 }
 
@@ -29,3 +20,6 @@ sf::FloatRect Collider::getIntersection()
 {
 	return intersection;
 }
+
+
+

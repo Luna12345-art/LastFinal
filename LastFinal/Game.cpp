@@ -12,9 +12,16 @@ void Game::initWindow()
 void Player::initPlayer()
 {
 	
-	player1.loadFromFile("Images/player.png");
+	player1.loadFromFile("Images/image.png");
 	spritePlayer.setTexture(player1);
+	animations[int(AnimationIndex::walkingLeft)] = Animation(0, 600, 300, 600);
+	animations[int(AnimationIndex::walkingRight)] = Animation(0, 0, 300, 600);
+	animations[int(AnimationIndex::flyingLeft)] = Animation(600, 0, 300, 600);
+	animations[int(AnimationIndex::flyingRight)] = Animation(600, 600, 300, 600);
+	//other.setOrigin(spritePlayer.getOrigin);
 	
+	body.setFillColor(sf::Color::Magenta);
+	//other.setSize(spritePlayer.getScale);
 	/*spritePlayer.setFillColor(sf::Color::Magenta);
 	spritePlayer.setSize(sf::Vector2f(150,200));*/
 }
@@ -24,6 +31,7 @@ Game::Game()
 
 	this->initWindow();
 	this->p.initPlayer();
+	
 
 }
 
@@ -61,7 +69,7 @@ void Game::update(sf::Time deltaTime)
 {
 	//this->updateEvents();
 	p.update(deltaTime);
-
+	p.collision();
 	//std::cout<< p.getCoordinate().x<< " " << p.getCoordinate().y<<"\n";
 }
 
@@ -72,17 +80,30 @@ void Game::render()
 {
 	
 	this->window->clear();
-	//sf::RectangleShape coolenemy;
-	cool.loadFromFile("Images/enemy.png",sf::IntRect(250,250,580,580));
-	coolenemy.setTexture(cool);
-	//Enemy1.setScale(0.05, 0.05);
-	//std::cout << p.getCoordinate().x << " ," << p.getCoordinate().y << std::endl;
-	coolenemy.setPosition(sf::Vector2f(150, 150));
-	coolenemy.setScale(0.5f, 0.5f);
-	this->window->draw(coolenemy);
+	
 	p.draw(window);
+	//this->window->draw(recta);
+	//this->window->draw(p.spritePlayer);
+	this->window->draw(p.body);
+
 	this->window->display();
 
 }
+
+void Player::collision()
+{
+	if (Collision::PixelPerfectTest(spritePlayer, coolenemy))
+	{
+
+		std::cout << "Collided";
+		//collisionVelocity();
+	}
+	else
+	{
+		std::cout << "Not Collided";
+		//updateVelocity();
+	}
+}
+
 
 

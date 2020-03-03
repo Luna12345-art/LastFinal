@@ -7,6 +7,7 @@
 #include<SFML/Network.hpp>
 #include"Player.h"
 #include "Collision.hpp"
+#include"Animation.h"
 
 
 class Game
@@ -15,9 +16,7 @@ private:
 	sf::RenderWindow* window;
 	sf::VideoMode VideoMode;
 	sf::Event ev;
-	sf::Texture cool;
-	sf::Sprite coolenemy;
-	
+	sf::FloatRect intersection;
 	void initWindow();
 	
 public:
@@ -28,7 +27,7 @@ public:
 	void update(sf::Time deltaTime);
 	void running();
 	void render();
-	//bool checkCollision(bool);
+	//void collision();
 	Player p;
 };
 

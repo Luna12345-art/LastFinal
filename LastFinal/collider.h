@@ -1,22 +1,19 @@
 #pragma once
-#include<SFML/Audio.hpp>
-#include<SFML/Graphics.hpp>
-#include<SFML/Window.hpp>
-#include<SFML/System.hpp>
-#include<SFML/Network.hpp>
+#include <SFML/Graphics.hpp>
+#include<iostream>
 class Collider
 {
-private:
-	
 public:
-	Collider();
-	
-	bool checkCollision(sf::RectangleShape& other);
 	Collider(sf::RectangleShape& body);
+	bool checkCollision(sf::RectangleShape& other);
 	sf::FloatRect getGlobalBounds();
 	sf::FloatRect intersection;
 	sf::FloatRect getIntersection();
 	bool isIntersected;
-	sf::RectangleShape body;
+	
+
+private:
+	sf::RectangleShape& body;
+	//sf::RectangleShape& other;
 };
 
