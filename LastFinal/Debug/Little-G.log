@@ -1,5 +1,0 @@
-﻿  Animation.cpp
-  Main.cpp
-C:\Users\User\source\repos\Little-G\Main.cpp(40,19): warning C4101: 'event': unreferenced local variable
-  Generating Code...
-  Little-G.vcxproj -> C:\Users\User\source\repos\Little-G\Debug\Little-G.exe
